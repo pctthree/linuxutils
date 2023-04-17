@@ -19,6 +19,8 @@ then
   echo "remove the .git file and create a READMEgit.md file"
   echo
 else
+  git config --global user.name "pctthree"
+  git config --global user.email "pctthree@yahoo.com"
   git init
   git add READMEgit.md
   git commit -m "First commit"
