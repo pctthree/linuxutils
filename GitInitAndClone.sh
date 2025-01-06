@@ -21,6 +21,7 @@ then
 else
   git config --global user.name "pctthree"
   git config --global user.email "pctthree@yahoo.com"
+  git config --global core.editor vi
   git init
   git add READMEgit.md
   git commit -m "First commit"
