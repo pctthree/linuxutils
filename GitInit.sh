@@ -25,7 +25,7 @@ fi
 
 printf "  Current directory: $pwd \n"
 printf "         Repository: $GitReposDir\n\n"
-printf "  Output:\n\n  Processing...\n\n"
+# printf "  Output:\n\n  Processing...\n\n"
 
 
 gitExists=$(ls -a ".git" 2>/dev/null)
@@ -38,10 +38,13 @@ then
   echo "remove the .git file and create a READMEgit.md file"
   echo
 fi
-  printf "Is this a (N)ew repo or (C)lone: "
+  printf "Is this a (N)ew repo, (D)elete repo or (C)lone repo: "
   read NewOrClone
   printf "\n"
   case $NewOrClone in
+    D)
+      printf "To delete a repository, login to github.com, select the repo, choose settings and navigate to the bottom of the page and choose Danger Zone\n\n"
+      ;;
     N)
 #     SetConfigAndInit
 #      GitCmd="git remote add origin http://github.com/pctthree/$GitReposDir.git"
